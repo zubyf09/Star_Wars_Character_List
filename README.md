@@ -1,6 +1,6 @@
 #  StarWars Android Challenge
 
-This sample app has been developed with Kotlin following an MVVM architecture pattern with a modular approach for **[Challenge](challenge.txt)** given by Trivago.
+This sample app has been developed with Kotlin following an MVVM architecture pattern with a modular approach for project
 
 # Working
 * Home screen: List characters by fetching from SWAPI with pagination, scroll to load more characters. 
