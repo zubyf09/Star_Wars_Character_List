@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.compileSdk
+    defaultConfig {
+        applicationId "com.trivago.challenge"
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.targetSdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner testing.junitRunner
+    }
+    buildTypes {
+        debug {
+            buildConfigField "String", "API_BASE", '"https://swapi.co/api/"'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "API_BASE", '"https://swapi.co/api/"'
+        }
+    }
+
+
+
+
+
+    dynamicFeatures = [":characters"]
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.android.play:core:1.6.1'
+
+    //Kotlin
+    api kotlinDep.stdlib
+
+    //Android
+    api androidDependencies.appCompat
+
+    //DI
+    api koinDep.core
+    api koinDep.android
+    api koinDep.viewmodel
+
+    //Arch components
+    api archComponents.components
+    kapt archComponents.componentsCompiler
+
+    //Networking
+    api networking.okhttp
+    api networking.okhttpLog
+    api networking.gson
+    api networking.retrofit
+    api networking.retrofitRx
+    api networking.retrofitGson
+    api networking.jodaTime
+
+    //UI
+    api ui.constraintLayout
+    api ui.recyclerview
+    api ui.material
+
+    //rx
+    api rx.java
+    api rx.android
+    api rx.kotlin
+
+}

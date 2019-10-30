@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvFilmName"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textStyle="bold"
+        tools:text="A New Hope" />
+
+    <TextView
+        android:id="@+id/tvFilmReleaseDate"
+        style="@style/TextAppearance.AppCompat.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        tools:text="released on 1977-05-25" />
+
+    <TextView
+        android:id="@+id/tvFilmCrawl"
+        style="@style/TextAppearance.AppCompat.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:textColor="@color/label_color"
+        tools:text="It is a period of civil war.\n\nRebel spaceships.\n\n\n\nDuring the battle, Empire's\n\nultimate, the DEATH\n\nSTAR, with enough power\n\nto destroy an entire planet freedom to the galaxy...." />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/divider_color"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
